@@ -33,9 +33,10 @@ export const Header = () => {
   const title = "Shahidul Shakil";
 
     return (
-    <header ref={container} className="relative w-full min-h-screen bg-[#f5f5f5]">
+    <header ref={container} className="relative w-full h-full flex flex-col justify-between py-[2rem] min-h-screen bg-[#f5f5f5]">
 
-        {/* Text and Nav should be on top of the image for blend mode to work beautifully */}
+        <div>
+                    {/* Text and Nav should be on top of the image for blend mode to work beautifully */}
         <div className='container mx-auto logoArea pt-[32px] relative z-[2000] mix-blend-difference text-white'>
             <h1 className='text-[120px] bg-clip-text titlesFont uppercase flex justify-between leading-[0.78]'>
                 {title.split('').map((char, index) => (
@@ -47,7 +48,7 @@ export const Header = () => {
         </div>
         
         {/* nav menu off about, services, work, contact */}
-        <div className='container mx-auto relative z-[2000] mix-blend-difference text-white'>
+        <div className='container mx-auto relative z-[2000] mix-blend-difference text-white bodyFont'>
                 <nav>
                     <ul className='flex justify-between gap-10 text-lg'>
                         <li>About</li>
@@ -56,7 +57,15 @@ export const Header = () => {
                         <li>Contact</li>
                     </ul>
                 </nav>
-        </div>  
+        </div> 
+        </div>
+
+        {/* bottom of this section */}
+        <div className='stayAtBottom container mx-auto relative z-[2000] mix-blend-difference text-white mt-8 bodyFont'>
+            <h3 className='text-2xl text-center max-w-2xl mx-auto font-light'>
+                Branding with a focus on typography, color, and composition. I create visual identities that are bold, memorable, and timeless.
+            </h3>
+        </div>
 
         {/* center image */}
         <div className='centerImageSec fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1000] pointer-events-none overflow-hidden rounded-md'>
