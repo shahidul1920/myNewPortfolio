@@ -119,7 +119,7 @@ export const Header = () => {
         {/* center image */}
         <div ref={imageRef} className='centerImageSec absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1000] pointer-events-none overflow-hidden rounded-md'>
             <img 
-              src="https://kimbrandesign.com/_astro/Hero.Bwo3F92J_Z4vX3r.webp" 
+              src="./header-shahidul-shakil.jpg" 
               alt="Header Image" 
               className='w-full h-full object-cover' 
             />
