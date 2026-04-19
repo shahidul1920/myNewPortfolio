@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+    
+.container {
+  max-width: 1200px;
+}
+.titlesFont {
+  font-family: "Rakkas", serif;
+}
+.bodyFont {
+  font-family: "Inter", sans-serif;
+}
