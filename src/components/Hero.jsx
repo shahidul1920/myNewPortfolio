@@ -11,6 +11,7 @@ function Hero() {
   const img1Ref = useRef(null);
   const img2Ref = useRef(null);
   const textRef = useRef(null);
+  const contnr = useRef(null);
 
   useGSAP(() => {
     const observer = new IntersectionObserver(
@@ -33,9 +34,9 @@ function Hero() {
     }
 
     const st = ScrollTrigger.create({
-      trigger: leftRef.current,
-      start: "top 20%", // Trigger slightly before it hits the center
-      end: "bottom 10%",
+      trigger: contnr.current,
+      start: "top top", 
+      end: "bottom bottom", 
       markers: true,
       scrub: 1,
       animation: gsap.timeline()
@@ -51,7 +52,7 @@ function Hero() {
 
   return (
     <div>
-      <main className='container mx-auto h-screen grid place-items-center grid-cols-2 gap-16'>
+      <main ref={contnr} className='container mx-auto h-screen grid place-items-center grid-cols-2 gap-16'>
 
         <section ref={leftRef} className="left flex flex-col">
           <div className="images relative w-3/4 max-w-sm mx-auto mb-16 pt-8">
