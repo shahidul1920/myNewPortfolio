@@ -34,10 +34,10 @@ function Hero() {
     }
 
     const st = ScrollTrigger.create({
-      trigger: contnr.current,
+      trigger: leftRef.current,
       start: "top top", 
       end: "bottom bottom", 
-      markers: true,
+      markers: false,
       scrub: 1,
       animation: gsap.timeline()
         .fromTo(img1Ref.current, { rotation: -5, x: 0, y: 0 }, { rotation: -30, ease: "none" }, 0)

@@ -7,6 +7,7 @@ export const App = () => {
   return (
     <>
       <Header />
+      <DownDemoSec />
       <Hero />
       <DownDemoSec />
     </>
