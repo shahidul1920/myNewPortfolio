@@ -14,6 +14,7 @@ function Hero() {
   const contnr = useRef(null);
 
   useGSAP(() => {
+    // SVG stroke animation on intersection
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -33,16 +34,17 @@ function Hero() {
       observer.observe(pathRef.current);
     }
 
-    const st = ScrollTrigger.create({
+    // Scroll-based subtle rotation animation for images
+    ScrollTrigger.create({
       trigger: leftRef.current,
-      start: "top top", 
-      end: "bottom bottom", 
-      markers: false,
-      scrub: 1,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.6,
+      markers: false, // Debug markers
       animation: gsap.timeline()
-        .fromTo(img1Ref.current, { rotation: -5, x: 0, y: 0 }, { rotation: -30, ease: "none" }, 0)
-        .fromTo(img2Ref.current, { rotation: 5, x: 0, y: 0 }, { rotation: 30, ease: "none" }, 0)
-        .fromTo(textRef.current, { y: 0 }, { y: -150, ease: "none" }, 0)
+        .fromTo(img1Ref.current, { rotation: -3 }, { rotation: 3, ease: "none" }, 0)
+        .fromTo(img2Ref.current, { rotation: 3 }, { rotation: -3, ease: "none" }, 0)
+        .fromTo(textRef.current, { y: 0 }, { y: -40, ease: "none" }, 0)
     });
 
     return () => {
