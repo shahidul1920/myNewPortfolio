@@ -100,7 +100,7 @@ function Hero() {
               </p>
             </div>
             <div className="myName">
-              <p className='handText text-2xl -rotate-15'>
+              <p className='handText text-[24px] -rotate-15'>
                  Shakil + +
               </p>
             </div>
