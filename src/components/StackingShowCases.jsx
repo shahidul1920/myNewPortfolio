@@ -33,8 +33,12 @@ const StackingShowCases = () => {
                 ScrollTrigger.create({
                     trigger: section,
                     start: "top top",
+                    end: () => "+=" + window.innerHeight,
                     pin: true,
-                    pinSpacing: false,
+                    scrub: 0.5,
+                    pinSpacing: true,
+                    anticipatePin: 1,
+                    markers: false,
                 })
             }
         })
@@ -42,13 +46,13 @@ const StackingShowCases = () => {
     },{scope:containerRef})
 
     return (
-        <div ref={containerRef} className="relative min-h-screen">
+        <div ref={containerRef} className="relative min-h-screen z-40 bg-red-900">
             {constents.map((contnt, i) => ( 
                 <section 
                     key={i} 
                     className={`showcase-section relative w-full h-screen ${contnt.bgClass} shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.5)]`}
                     style={{ 
-                        zIndex: i,
+                        zIndex: constents.length - i,
                     }}
                 >
                     <div className="container mx-auto h-full flex flex-col justify-center px-8">
