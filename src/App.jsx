@@ -10,7 +10,7 @@ export const App = () => {
     <>
       <Header />
       <Hero />
-      {/* <StackingShowCases /> */}
+      <StackingShowCases />
       <DownDemoSec />
       <DemoStacking />
     </>
