@@ -63,9 +63,9 @@ const StackingShowCases = () => {
                 >
                     <div className="container mx-auto h-full flex gap-[2rem] justify-center items-center px-8">
                         <div className="left handText">
-                            <h2 className='text-[120px] font-bold mb-4 text-white rotate-[-15deg]'>{contnt.title}</h2>
+                            <h2 className='text-[150px] font-bold mb-4 text-white rotate-[-15deg]'>{contnt.title}</h2>
                         </div>
-                        <div className="right bodyFont">
+                        <div className="right bodyFont flex items-end justify-end w-full h-full pb-[7rem]">
                             <p className='text-lg text-white max-w-md'>{contnt.description}{i}</p>
                         </div>
                     </div>
