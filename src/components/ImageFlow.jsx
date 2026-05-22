@@ -23,7 +23,7 @@ function ImageFlow() {
           opacity: 1,
           y: 0,
           duration: 0.6,
-          delay: 0.5,
+          delay: 0.3,
           stagger: 0.05,
           scrollTrigger: {
             trigger: headingRef.current,
