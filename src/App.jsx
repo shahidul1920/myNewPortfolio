@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import DownDemoSec from './components/DownDemoSec'
 import StackingShowCases from './components/StackingShowCases'
 import DemoStacking from './components/DemoStacking'
-//import ImageFlow from './components/ImageFlow'
+import ImageFlow from './components/ImageFlow'
 import Expernc from './components/Expernc'
 
 export const App = () => {
@@ -13,6 +13,7 @@ export const App = () => {
       <Header />
       <Hero />
       <StackingShowCases />
+      < ImageFlow />
       <Expernc />
       <DownDemoSec />
       {/* <DemoStacking /> */}
