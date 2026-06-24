@@ -12,6 +12,7 @@ export const Discover = () => {
             <div className="image w-[200px] h-[200px] bg-amber-900 rounded-full overflow-hidden">
                 <img className='w-full h-full object-cover' src="https://kimbrandesign.com/_astro/Works_Kim.BBNA_L4q_ZNRXfX.webp" alt="" />
             </div>
+            <div className="name handText text-black text-2xl -rotate-20 -translate-y-6 translate-x-6">Shakil</div>
         </section>
         
     </div>
