@@ -6,6 +6,7 @@ import StackingShowCases from './components/StackingShowCases'
 import DemoStacking from './components/DemoStacking'
 import ImageFlow from './components/ImageFlow'
 import Expernc from './components/Expernc'
+import { Discover } from './components/Discover'
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <Hero />
       <StackingShowCases />
       < ImageFlow />
+      <Discover />
       <Expernc />
       <DownDemoSec />
       {/* <DemoStacking /> */}
