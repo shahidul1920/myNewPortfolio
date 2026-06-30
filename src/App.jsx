@@ -8,6 +8,7 @@ import ImageFlow from './components/ImageFlow'
 import Expernc from './components/Expernc'
 import { Discover } from './components/Discover'
 import { Sustain } from './components/Sustain'
+import { Dream } from './components/Dream'
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
       <Discover />
       <Expernc />
       <Sustain />
+      <Dream />
       <DownDemoSec />
       {/* <DemoStacking /> */}
     </>
