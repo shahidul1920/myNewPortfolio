@@ -13,22 +13,19 @@ const PersonalProjects = () => {
             title: "Chat App with MERN Stack",
             description: "Full-featured real-time messaging application built on MongoDB, Express, React, and Node.js with Socket.io for instantaneous messaging and JWT authentication.",
             techStack: ["MongoDB", "Express", "React JS", "Node.js", "Socket.io"],
-            image: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp",
-            placeholderText: "[IMAGE: ./projects/mern-chat.jpg]"
+            image: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp"
         },
         {
             title: "Personal Chatbot with Ollama 8B",
             description: "Privacy-focused local AI conversational chatbot powered by the Ollama Llama 3 8B model. Custom streaming interface with system prompt customization.",
             techStack: ["Ollama 8B", "React.js", "Node.js", "Streaming API"],
-            image: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp",
-            placeholderText: "[IMAGE: ./projects/ollama-chatbot.jpg]"
+            image: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp"
         },
         {
             title: "AI Agent for Organizing Leads",
             description: "Intelligent automation agent that extracts, categorizes, scores, and organizes business leads automatically using prompt pipelines and data structuring.",
             techStack: ["AI Agents", "JavaScript", "Node.js", "API Automation"],
-            image: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp",
-            placeholderText: "[IMAGE: ./projects/ai-lead-agent.jpg]"
+            image: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp"
         }
     ]
 

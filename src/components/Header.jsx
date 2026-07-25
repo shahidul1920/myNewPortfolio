@@ -130,8 +130,8 @@ export const Header = () => {
                         onError={() => setImgError(true)}
                     />
                 ) : (
-                    <div className="absolute inset-0 img-placeholder flex items-center justify-center">
-                        <span className="text-xs font-mono font-bold bg-white/90 text-black px-3 py-1.5 rounded shadow">[IMAGE: /header-shahidul-shakil.jpg]</span>
+                    <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center">
+                        <span className="text-white text-xs font-semibold uppercase tracking-wider">Shahidul Shakil</span>
                     </div>
                 )}
             </div>

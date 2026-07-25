@@ -11,18 +11,15 @@ const StackingShowCases = () => {
         {
             title: "WordPress & Custom Code",
             description: "Custom WordPress Theme Development • Elementor Customization • PHP Logic & Hooks • Performance Optimization • SEO Architecture • Cross-browser Responsive Builds",
-            bgUrl: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp",
-            placeholderText: "[IMAGE: ./services/wordpress-bg.jpg]"
+            bgUrl: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp"
         }, {
             title: "React & GSAP Motion",
             description: "Interactive React JS Web Applications • ScrollTrigger & Timeline Orchestrations • SVG Path Animations • Physics-based UI Motion • Modern State Management",
-            bgUrl: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp",
-            placeholderText: "[IMAGE: ./services/react-gsap-bg.jpg]"
+            bgUrl: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp"
         }, {
             title: "UI/UX & Brand Identity",
             description: "Figma Wireframing & Prototyping • Brand Identity & Logo Design • Adobe Photoshop & Illustrator • After Effects Motion Assets • Design System Architecture",
-            bgUrl: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp",
-            placeholderText: "[IMAGE: ./services/uiux-bg.jpg]"
+            bgUrl: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp"
         }
     ]
 

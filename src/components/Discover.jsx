@@ -78,8 +78,8 @@ export const Discover = () => {
                     onError={() => setImgError(true)}
                   />
                 ) : (
-                  <div className="absolute inset-0 img-placeholder rounded-full flex items-center justify-center">
-                      <span className="text-[9px] font-mono font-bold bg-white/90 text-black px-2 py-1 rounded shadow">[IMAGE: ./avatar-shakil.jpg]</span>
+                  <div className="absolute inset-0 bg-zinc-800 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      SS
                   </div>
                 )}
             </div>

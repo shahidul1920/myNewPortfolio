@@ -71,8 +71,8 @@ function Hero() {
                   onError={() => setImg1Error(true)}
                 />
               ) : (
-                <div className="w-full h-full img-placeholder flex items-center justify-center">
-                  <span className="text-xs font-mono font-bold bg-white/95 text-black px-3 py-1.5 rounded shadow border border-zinc-200">[IMAGE: ./hero-about-01.jpg]</span>
+                <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
+                  <span className="text-sm font-semibold text-white uppercase tracking-wider">Shahidul Shakil</span>
                 </div>
               )}
             </div>

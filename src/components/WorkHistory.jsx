@@ -37,10 +37,10 @@ const WorkHistory = () => {
     ]
 
     const certificates = [
-        { name: "UX/UI Designer", org: "CreativeIT", placeholderText: "[IMAGE: ./certificates/creativeit.jpg]" },
-        { name: "Graphics Designer", org: "Twoinsoft", placeholderText: "[IMAGE: ./certificates/twoinsoft.jpg]" },
-        { name: "MERN Dev", org: "eShikhon", placeholderText: "[IMAGE: ./certificates/eshikhon.jpg]" },
-        { name: "Next JS", org: "Frontend Master", placeholderText: "[IMAGE: ./certificates/frontendmaster.jpg]" },
+        { name: "UX/UI Designer", org: "CreativeIT" },
+        { name: "Graphics Designer", org: "Twoinsoft" },
+        { name: "MERN Dev", org: "eShikhon" },
+        { name: "Next JS", org: "Frontend Master" },
     ]
 
     const education = [
@@ -156,11 +156,7 @@ const WorkHistory = () => {
                                     <div key={idx} className="cert-card bg-white border border-gray-200 rounded-2xl p-5 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 group">
                                         <div>
                                             <h4 className="text-[18px] font-bold titlesFont uppercase text-gray-900 mb-1 group-hover:tracking-wide transition-all">{cert.name}</h4>
-                                            <span className="text-[12px] bodyFont text-gray-600 block mb-4">From {cert.org}</span>
-                                        </div>
-                                        {/* Certificate Image Location */}
-                                        <div className="w-full h-16 rounded-lg img-placeholder flex items-center justify-center">
-                                            <span className="text-[9px] font-mono font-bold bg-white/90 text-black px-2 py-0.5 rounded shadow">{cert.placeholderText}</span>
+                                            <span className="text-[12px] bodyFont text-gray-600 block">From {cert.org}</span>
                                         </div>
                                     </div>
                                 ))}
