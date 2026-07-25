@@ -9,17 +9,20 @@ const StackingShowCases = () => {
     const containerRef = useRef(null);
     const constents = [
         {
-            title: "Brand strategy",
-            description: "Brand Audit & Insights Strategic Planning Brand platform Positioning & concept Storytelling Innovation opportunities",
-            bgUrl: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp"
+            title: "WordPress & Custom Code",
+            description: "Custom WordPress Theme Development • Elementor Customization • PHP Logic & Hooks • Performance Optimization • SEO Architecture • Cross-browser Responsive Builds",
+            bgUrl: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp",
+            placeholderText: "[IMAGE: ./services/wordpress-bg.jpg]"
         }, {
-            title: "Brand creation",
-            description: "Brand identity Look & feel Packaging design Product design Creative Direction Brand Guidelines",
-            bgUrl: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp"
+            title: "React & GSAP Motion",
+            description: "Interactive React JS Web Applications • ScrollTrigger & Timeline Orchestrations • SVG Path Animations • Physics-based UI Motion • Modern State Management",
+            bgUrl: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp",
+            placeholderText: "[IMAGE: ./services/react-gsap-bg.jpg]"
         }, {
-            title: "Brand experience",
-            description: "Brand activation Campaigns & content Social media strategy & content Digital experience design Retail experience design Environmental design",            
-            bgUrl: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp"
+            title: "UI/UX & Brand Identity",
+            description: "Figma Wireframing & Prototyping • Brand Identity & Logo Design • Adobe Photoshop & Illustrator • After Effects Motion Assets • Design System Architecture",
+            bgUrl: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp",
+            placeholderText: "[IMAGE: ./services/uiux-bg.jpg]"
         }
     ]
 
@@ -49,24 +52,24 @@ const StackingShowCases = () => {
         // Handle window resize to recalculate scroll positions
         const handleResize = () => ScrollTrigger.refresh();
         window.addEventListener("resize", handleResize);
-        
+
         return () => window.removeEventListener("resize", handleResize);
     }, { scope: containerRef })
 
     return (
-        <div ref={containerRef} className="relative min-h-screen bg-red-900">
+        <div id="services" ref={containerRef} className="relative min-h-screen bg-zinc-900">
             {constents.map((contnt, i) => (
                 <section
                     key={i}
                     className={`showcase-section relative w-full h-screen shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.5)]`}
-                    style={{ backgroundImage: `url('${contnt.bgUrl}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                    style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('${contnt.bgUrl}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
-                    <div className="container mx-auto h-full flex gap-[2rem] justify-center items-center px-8">
-                        <div className="left handText">
-                            <h2 className='text-[150px] font-bold mb-4 text-white rotate-[-15deg]'>{contnt.title}</h2>
+                    <div className="container mx-auto h-full flex flex-col lg:flex-row gap-4 lg:gap-[4rem] justify-center items-center px-6 md:px-8 py-8 lg:py-0">
+                        <div className="left titlesFont w-full lg:w-3/5">
+                            <h2 className='text-[28px] sm:text-[48px] lg:text-[84px] font-extrabold mb-2 lg:mb-4 text-white uppercase tracking-tight leading-[1.05] drop-shadow-2xl'>{contnt.title}</h2>
                         </div>
-                        <div className="right bodyFont flex items-end justify-end w-full h-full pb-[7rem]">
-                            <p className='text-lg text-white max-w-md'>{contnt.description}{i}</p>
+                        <div className="right bodyFont flex items-center lg:items-end justify-center lg:justify-end w-full lg:w-2/5 lg:h-full pb-8 lg:pb-[7rem]">
+                            <p className='text-sm sm:text-base md:text-xl text-zinc-200 max-w-md leading-relaxed font-light border-l-2 border-white/30 pl-4'>{contnt.description}</p>
                         </div>
                     </div>
                 </section>

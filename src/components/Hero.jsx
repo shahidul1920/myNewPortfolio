@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -12,6 +12,7 @@ function Hero() {
   const img2Ref = useRef(null);
   const textRef = useRef(null);
   const contnr = useRef(null);
+  const [img1Error, setImg1Error] = useState(false);
 
   useGSAP(() => {
     // SVG stroke animation on intersection
@@ -53,57 +54,78 @@ function Hero() {
   });
 
   return (
-    <div>
-      <main ref={contnr} className='container mx-auto h-screen grid place-items-center grid-cols-2 gap-16'>
+    <div id="about">
+      <main ref={contnr} className='container mx-auto min-h-screen grid place-items-center grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 px-4 md:px-8 py-16 lg:py-0'>
 
-        <section ref={leftRef} className="left flex flex-col">
-          <div className="images relative w-3/4 max-w-sm mx-auto mb-16 pt-8">
-            <img ref={img1Ref} src="https://kimbrandesign.com/_astro/About_01.ZXzuB3eg_Z2e5j5Y.webp" alt="Hero Image 1" className='w-full h-auto rounded-xl shadow-2xl -rotate-5 origin-bottom relative z-10' />
-            <img ref={img2Ref} src="https://kimbrandesign.com/_astro/About_02.Di9Nhm44_ZeCWQd.webp" alt="Hero Image 2" className='w-full h-auto rounded-xl shadow-2xl rotate-5 origin-bottom absolute top-8 left-0 z-5' />
+        <section ref={leftRef} className="left flex flex-col items-center w-full">
+          {/* Balanced card stack container */}
+          <div className="images relative w-3/4 max-w-[300px] sm:max-w-[350px] mx-auto mb-16 pt-8">
+
+            {/* Front Card (Image) */}
+            <div ref={img1Ref} className="w-full aspect-[4/5] rounded-2xl shadow-2xl -rotate-6 origin-bottom relative z-10 overflow-hidden bg-zinc-200 border border-zinc-300">
+              {!img1Error ? (
+                <img
+                  src="/shakil.png"
+                  alt="Shahidul Shakil Work"
+                  className='w-full h-full object-cover grayscale contrast-105'
+                  onError={() => setImg1Error(true)}
+                />
+              ) : (
+                <div className="w-full h-full img-placeholder flex items-center justify-center">
+                  <span className="text-xs font-mono font-bold bg-white/95 text-black px-3 py-1.5 rounded shadow border border-zinc-200">[IMAGE: ./hero-about-01.jpg]</span>
+                </div>
+              )}
+            </div>
+
+            {/* Behind Card (Image) */}
+            <div ref={img2Ref} className="w-full aspect-[4/5] rounded-2xl shadow-2xl rotate-6 origin-bottom absolute top-8 left-0 z-5 overflow-hidden bg-zinc-800">
+              <img
+                src="https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp"
+                alt="Brand Engagement"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
           </div>
-          <div ref={textRef} className="textUnderImg text-2xl text-center">
-            <div className="-rotate-15 inline-block">
+
+          <div ref={textRef} className="textUnderImg text-2xl md:text-3xl text-center">
+            <div className="-rotate-12 inline-block">
               <p className='handText'>
-                Shaping the <br /> beauty of everyday <br /> brands.
+                Shaping the <br /> beauty of modern <br /> digital brands.
               </p>
             </div>
           </div>
         </section>
 
         <section className="right">
-          <div className="textSec pl-[6rem]">
-            <div className="signSVG">
-              <svg width="117" height="332" viewBox="0 0 117 332" fill="none" xmlns="http://www.w3.org/2000/svg" className="about__deco" data-astro-cid-3cggfioh=""> <path ref={pathRef} d="M60.8461 76.3911C-133.162 168.782 213.858 -11.2246 87.8511 1.10964C35.3209 6.25156 18.8719 39.65 18.872 158.37L18.9289 331.15" stroke="black" strokeLinecap="round" data-astro-cid-3cggfioh="" style={{ strokeDashoffset: '613.677px', strokeDasharray: '613.677px, 613.677px' }}></path> </svg>
+          <div className="textSec pl-0 lg:pl-[4rem] xl:pl-[6rem]">
+            <div className="signSVG mb-4 lg:mb-0">
+              <svg viewBox="0 0 117 332" fill="none" xmlns="http://www.w3.org/2000/svg" className="about__deco w-16 sm:w-20 lg:w-[117px] h-auto"> <path ref={pathRef} d="M60.8461 76.3911C-133.162 168.782 213.858 -11.2246 87.8511 1.10964C35.3209 6.25156 18.8719 39.65 18.872 158.37L18.9289 331.15" stroke="black" strokeLinecap="round" style={{ strokeDashoffset: '613.677px', strokeDasharray: '613.677px, 613.677px' }}></path> </svg>
             </div>
             <div className="text">
-              <p className='bodyFont'>
-                KIMBRANDESIGN is a strategic brand
-                transformation studio led by Kim Sentis. <br /><br />
+              <p className='bodyFont text-sm md:text-base leading-relaxed'>
+                Results-driven <strong>Creative Developer</strong> and
+                <strong> Visual Engineer</strong> with 4+ years of experience
+                creating visually engaging and user-friendly web experiences. <br /><br />
 
-                With over 15 years of experience in cosmetics,
-                branding and marketing, Kim partners with
-                brand leaders to clarify vision, unlock new
-                positioning and guide meaningful
-                transformation.<br /><br />
+                Proven ability to deliver high-quality custom WordPress
+                platforms, bespoke React JS web applications, and GSAP
+                interactive motion — resulting in increased user engagement
+                and client satisfaction.<br /><br />
 
-                Combining strategic clarity, emotional
-                intelligence and creative leadership, KBD helps
-                brands express who they truly are - clearly,
-                consistently and beautifully.<br /><br />
+                Combining strategic visual design (Figma, Photoshop,
+                Illustrator) with robust frontend code, bridging the gap
+                between brand identity and interactive digital
+                performance.<br /><br />
 
-                We often work with brands at pivotal moments
-                - when they need to redefine who they are
-                and where they are going.<br /><br />
-
-                Our hybrid model allows us to assemble
-                tailor-made teams around each project,
-                delivering the strategic depth of a consultancy
-                with the creative impact of a leading agency.
+                Based in <strong>Sector 15, Uttara, Dhaka</strong> — available for
+                remote contract work, agency collaborations, and custom
+                web platform builds.
               </p>
             </div>
-            <div className="myName">
-              <p className='handText text-[24px] -rotate-15'>
-                 Shakil + +
+            <div className="myName mt-6">
+              <p className='handText text-[28px] md:text-[40px] -rotate-15'>
+                Shakil + +
               </p>
             </div>
           </div>

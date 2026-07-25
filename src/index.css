@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=WindSong:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @layer base {
@@ -9,17 +7,40 @@
     padding: 0;
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
     
 .container {
   max-width: 1200px;
 }
 .titlesFont {
-  font-family: "Rakkas", serif;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 .bodyFont {
   font-family: "Inter", sans-serif;
 }
 .handText {
   font-family: "WindSong", cursive;
+}
+
+/* Image placeholder visual for missing images */
+.img-placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    #e4e4e7,
+    #e4e4e7 10px,
+    #f4f4f5 10px,
+    #f4f4f5 20px
+  );
+  border: 2px dashed #a1a1aa;
+}
+
+/* Scroll-triggered reveal helper */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
 }

@@ -104,27 +104,27 @@ function ImageFlow() {
       strokeDashoffset: pathLength,
     })
 
-    // Animate SVG path with scroll - slower animation
+    // Animate SVG path with scroll - perfectly synced scrub
     gsap.to(path, {
       strokeDashoffset: 0,
+      ease: 'none',
       scrollTrigger: {
         trigger: containerRef.current,
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 2.5,
-        duration: 3
+        start: 'top 70%',
+        end: 'bottom 30%',
+        scrub: 1,
       }
     })
   }, { scope: containerRef })
 
   return (
-    <section className="image-flow py-16 relative" ref={containerRef}>
+    <section className="image-flow py-16 relative overflow-hidden" ref={containerRef}>
       {/* SVG Snake/S-curve Path */}
       <svg 
         className="absolute left-0 top-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
         viewBox="0 0 1200 3000"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="none"
       >
         <path
           ref={svgPathRef}
@@ -137,8 +137,8 @@ function ImageFlow() {
         />
       </svg>
 
-      <div className="topHeading container mx-auto mb-[3rem] relative z-10" ref={headingRef}>
-        <h2 className="text-[180px] text-center font-bold mb-4 uppercase flex justify-between">
+      <div className="topHeading container mx-auto mb-[3rem] relative z-10 px-4" ref={headingRef}>
+        <h2 className="titlesFont text-[12vw] md:text-[120px] lg:text-[160px] text-center font-extrabold mb-4 uppercase flex justify-between tracking-tight leading-none">
           <span>O</span>
           <span>u</span>
           <span>r</span>
