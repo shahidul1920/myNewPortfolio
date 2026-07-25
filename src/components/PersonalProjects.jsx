@@ -13,18 +13,21 @@ const PersonalProjects = () => {
             title: "Chat App with MERN Stack",
             description: "Full-featured real-time messaging application built on MongoDB, Express, React, and Node.js with Socket.io for instantaneous messaging and JWT authentication.",
             techStack: ["MongoDB", "Express", "React JS", "Node.js", "Socket.io"],
+            image: "https://kimbrandesign.com/_astro/brand_strategy.w0hVrqaj_ZcECwk.webp",
             placeholderText: "[IMAGE: ./projects/mern-chat.jpg]"
         },
         {
             title: "Personal Chatbot with Ollama 8B",
             description: "Privacy-focused local AI conversational chatbot powered by the Ollama Llama 3 8B model. Custom streaming interface with system prompt customization.",
             techStack: ["Ollama 8B", "React.js", "Node.js", "Streaming API"],
+            image: "https://kimbrandesign.com/_astro/brand_creation.O16Mg-Jj_ZkBMgR.webp",
             placeholderText: "[IMAGE: ./projects/ollama-chatbot.jpg]"
         },
         {
             title: "AI Agent for Organizing Leads",
             description: "Intelligent automation agent that extracts, categorizes, scores, and organizes business leads automatically using prompt pipelines and data structuring.",
             techStack: ["AI Agents", "JavaScript", "Node.js", "API Automation"],
+            image: "https://kimbrandesign.com/_astro/brand_engagement.DKpNVKw7_ZpEzE9.webp",
             placeholderText: "[IMAGE: ./projects/ai-lead-agent.jpg]"
         }
     ]
@@ -107,9 +110,16 @@ const PersonalProjects = () => {
                                     {project.description}
                                 </p>
 
-                                {/* Image Location Visual — Fixed Uniform Height */}
-                                <div className="w-full h-44 rounded-xl img-placeholder flex items-center justify-center mb-6 mt-auto">
-                                    <span className="text-[10px] font-mono font-bold bg-white/90 text-black px-2.5 py-1 rounded shadow">{project.placeholderText}</span>
+                                {/* Image Container with Blue Filter Overlay */}
+                                <div className="relative w-full h-44 rounded-xl overflow-hidden mb-6 mt-auto border border-gray-200 shadow-sm group-hover:shadow-md transition-shadow">
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    {/* Blue Filter Overlay */}
+                                    <div className="absolute inset-0 bg-blue-600/35 mix-blend-multiply transition-colors duration-300"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
 

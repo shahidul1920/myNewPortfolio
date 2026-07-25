@@ -114,42 +114,42 @@ const projects = [
 
 /* ── Card content (rendered inside each pinned full-screen section) ── */
 const ProjectCard = ({ project }) => (
-    <div className="container mx-auto h-full min-h-screen flex items-center px-4 md:px-8 py-12 lg:py-0">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+    <div className="container mx-auto h-full min-h-screen flex items-center px-4 md:px-8 py-10 lg:py-0">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
             
             {/* Left: Big Number + Title */}
             <div className="lg:col-span-5 flex flex-col justify-center">
-                <span className="titlesFont text-[80px] sm:text-[120px] lg:text-[160px] font-black text-zinc-200 leading-none -mb-4 lg:-mb-8 select-none">{project.num}</span>
-                <h3 className='text-[28px] sm:text-[38px] lg:text-[48px] font-extrabold titlesFont uppercase leading-tight text-zinc-900'>
+                <span className="titlesFont text-[60px] sm:text-[100px] lg:text-[160px] font-black text-zinc-200 leading-none -mb-2 lg:-mb-8 select-none">{project.num}</span>
+                <h3 className='text-[24px] sm:text-[34px] lg:text-[48px] font-extrabold titlesFont uppercase leading-tight text-zinc-900'>
                     {project.title}
                 </h3>
                 <a 
                     href={`https://${project.url}`} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className='text-sm font-mono font-medium text-blue-600 hover:text-blue-800 inline-flex items-center gap-1.5 mt-3 group/link'
+                    className='text-xs sm:text-sm font-mono font-medium text-blue-600 hover:text-blue-800 inline-flex items-center gap-1.5 mt-2 group/link'
                 >
                     {project.url} <span className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">↗</span>
                 </a>
             </div>
 
             {/* Right: Details */}
-            <div className="lg:col-span-7 flex flex-col gap-6">
+            <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-6">
                 
-                <span className="text-xs bodyFont font-semibold text-zinc-800 bg-zinc-100 border border-zinc-200 py-1.5 px-4 rounded-full w-fit">
+                <span className="text-xs bodyFont font-semibold text-zinc-800 bg-zinc-100 border border-zinc-200 py-1 px-3 sm:py-1.5 sm:px-4 rounded-full w-fit">
                     {project.role}
                 </span>
 
-                <p className='text-base md:text-lg bodyFont font-light leading-relaxed text-zinc-600 border-l-2 border-zinc-300 pl-5'>
+                <p className='text-sm sm:text-base md:text-lg bodyFont font-light leading-relaxed text-zinc-600 border-l-2 border-zinc-300 pl-4 sm:pl-5'>
                     {project.description}
                 </p>
 
                 {/* Key Highlights */}
                 <div>
-                    <h4 className='text-xs font-mono font-semibold uppercase text-zinc-900 mb-3 tracking-wider'>Key Highlights</h4>
-                    <ul className='space-y-2'>
+                    <h4 className='text-[11px] sm:text-xs font-mono font-semibold uppercase text-zinc-900 mb-2 tracking-wider'>Key Highlights</h4>
+                    <ul className='space-y-1.5'>
                         {project.highlights.map((highlight, idx) => (
-                            <li key={idx} className='text-sm bodyFont font-light text-zinc-600 flex items-start gap-2.5'>
+                            <li key={idx} className='text-xs sm:text-sm bodyFont font-light text-zinc-600 flex items-start gap-2.5'>
                                 <span className='text-blue-500 font-bold mt-0.5'>•</span>
                                 <span>{highlight}</span>
                             </li>
@@ -158,12 +158,12 @@ const ProjectCard = ({ project }) => (
                 </div>
 
                 {/* Tech Stack */}
-                <div className="pt-4 border-t border-zinc-200">
-                    <div className='flex flex-wrap gap-2'>
+                <div className="pt-3 border-t border-zinc-200">
+                    <div className='flex flex-wrap gap-1.5 sm:gap-2'>
                         {project.techStack.map((tech, index) => (
                             <span 
                                 key={index} 
-                                className='bg-zinc-50 text-zinc-800 py-1.5 px-4 rounded-full text-xs bodyFont font-medium border border-zinc-200/70'
+                                className='bg-zinc-50 text-zinc-800 py-1 px-3 sm:py-1.5 sm:px-4 rounded-full text-[11px] sm:text-xs bodyFont font-medium border border-zinc-200/70'
                             >
                                 {tech}
                             </span>
@@ -237,7 +237,7 @@ function Expernc() {
                 {projects.map((project, i) => (
                     <section
                         key={project.id}
-                        className={`project-panel relative w-full h-screen ${i === 0 ? '' : 'shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.15)]'}`}
+                        className={`project-panel relative w-full min-h-screen lg:h-screen ${i === 0 ? '' : 'shadow-[0_-20px_30px_-15px_rgba(0,0,0,0.15)]'}`}
                         style={{ backgroundColor: i % 2 === 0 ? '#ffffff' : '#f5f5f7' }}
                     >
                         <ProjectCard project={project} />
