@@ -213,10 +213,10 @@ function Expernc() {
     return (
         <>
             {/* Header section — sits OUTSIDE the pinned stacking container */}
-            <section id="work" className="expernc pt-12 lg:pt-16 pb-4 relative bg-[#f9f9fb]">
+            <section id="work" className="expernc pt-12 lg:pt-16 pb-4 relative bg-white">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="topPer mb-6">
-                        <h3 className='flex flex-wrap gap-x-3 gap-y-1 text-[22px] sm:text-[30px] md:text-[36px] font-medium uppercase titlesFont leading-snug text-zinc-900'>
+                        <h3 className='flex flex-wrap gap-x-3 gap-y-1 text-[22px] sm:text-[30px] md:text-[36px] font-medium titlesFont leading-snug text-zinc-900'>
                             Shahidul Shakil melds strategy, custom code, and design to give voice to every client project, elevating them in their sector.
                         </h3>
                     </div>

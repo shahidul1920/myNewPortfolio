@@ -75,7 +75,7 @@ const PersonalProjects = () => {
                 
                 {/* Heading — same style as Expernc topPer */}
                 <div className="topPer mb-4">
-                    <h3 className='flex flex-wrap gap-x-3 gap-y-1 text-[20px] sm:text-[28px] md:text-[32px] font-semibold uppercase bodyFont leading-tight'>
+                    <h3 className='flex flex-wrap gap-x-3 gap-y-1 text-[20px] sm:text-[28px] md:text-[32px] font-semibold bodyFont leading-tight'>
                         {["Beyond", "client", "work,", "exploring", "AI", "agents,", "local", "LLMs,", "and", "real-time", "MERN", "applications."].map((word, i) => (
                             <span key={i} className="heading-word">{word}</span>
                         ))}

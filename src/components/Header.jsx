@@ -84,8 +84,8 @@ export const Header = () => {
 
             <div className="relative z-[2000] mix-blend-difference text-white">
                 {/* Text and Nav should be on top of the image for blend mode to work beautifully */}
-                <div className='container mx-auto logoArea pt-[16px] md:pt-[32px] px-4 md:px-0'>
-                    <h1 className='text-[12vw] md:text-[120px] bg-clip-text titlesFont uppercase flex justify-between leading-[0.85] md:leading-[0.78]'>
+                <div className='container mx-auto logoArea pt-[16px] md:pt-[32px] px-2 sm:px-4 md:px-0'>
+                    <h1 className='text-[6.2vw] min-[400px]:text-[6.5vw] sm:text-[8.5vw] md:text-[120px] bg-clip-text titlesFont uppercase flex justify-between leading-[0.85] md:leading-[0.78] w-full'>
                         {title.split('').map((char, index) => (
                             <span key={index} className="char inline-block whitespace-pre relative">
                                 {char}
